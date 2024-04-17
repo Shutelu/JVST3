@@ -24,3 +24,11 @@ afin de créer la bibliothèque qui sera utilisée par App.java.
 
 Après la génération de la bibliothèque, il nous suffira de lancer la commande :<br>
 `java -Djava.library.path=. App.java` afin de voir le résultat.
+
+Résultat :
+Java_samples_App_printCalcul
+Java_samples_App_printName
+Name: Simpson
+Resultat du calcul : 5
+Nom : Monsieur Simpson
+
