@@ -22,9 +22,12 @@ JNIEXPORT void JNICALL Java_Hello_printHello(JNIEnv *env, jclass obj, jstring ms
 `Java_Hello_printHello` : C'est le nom de la fonction. Il suit une convention de nommage spécifique à JNI : `Java_{package_et_nom_de_classe}_{nom_de_fonction}`
 
 `(JNIEnv *env, jclass obj, jstring msg)` : Ce sont les paramètres de fonction avec 
+
 `JNIEnv *env`, le pointeur vers l'environnement JNI, qui est utilisé pour accéder aux méthodes JNI.
+
 `jclass obj`, la référence à la classe Java qui a appelé cette méthode native. Dans ce cas, c’est la classe Hello.
-`jstring msg` : le paramètre que la méthode native prend. Dans ce cas, c’est une chaîne de caractères Java.
+
+`jstring msg`, le paramètre que la méthode native prend. Dans ce cas, c’est une chaîne de caractères Java.
 
 ## Manipuler des chaînes de caractères en JNI
 
