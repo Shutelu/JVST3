@@ -109,6 +109,7 @@ void SimpleEQAudioProcessorEditor::resized()
     // subcomponents in your editor..
 }
 
+extern "C" {
 JNIEXPORT jstring JNICALL Java_PluginScanner_scanFiles(JNIEnv *env, jclass obj) {
     SimpleEQAudioProcessor processor;
     juce::AudioProcessorEditor* editorGeneric = processor.createEditor();
@@ -116,4 +117,5 @@ JNIEXPORT jstring JNICALL Java_PluginScanner_scanFiles(JNIEnv *env, jclass obj) 
     std::string pluginList = editor->scanPlugins();
     delete editor;
     return env->NewStringUTF(pluginList.c_str());
+}
 }

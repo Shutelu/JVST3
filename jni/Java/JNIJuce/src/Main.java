@@ -1,12 +1,14 @@
 public class Main {
 
     static{
-        System.loadLibrary("scanFiles");
+        System.loadLibrary("pluginNative");
     }
 
-    public static native String scanNativeFiles();
+    public static native String scanFiles();
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        PluginScanner scanner = new PluginScanner();
+        String toPrint = scanner.scanFiles();
+        System.out.println(toPrint);
     }
 }
